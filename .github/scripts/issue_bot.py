@@ -377,7 +377,7 @@ def validate_resources(readme, updated_readme, reach_fn=reach, resolve_fn=check_
     )
 
 
-def commit_readme(issue_number, readme, updated_readme):
+def commit_readme(issue_number, readme, updated_readme, contributor_login=None):
     subprocess.run(["git", "fetch", "origin", "main"], check=True)
     subprocess.run(["git", "merge", "--ff-only", "FETCH_HEAD"], check=True)
     with open("README.md", encoding="utf-8") as file:
@@ -391,6 +391,15 @@ def commit_readme(issue_number, readme, updated_readme):
     with open("README.md", "w", encoding="utf-8") as file:
         file.write(updated_readme)
 
+    if contributor_login and contributor_login.lower() != "niko":
+        contributor_env = os.environ.copy()
+        contributor_env["CONTRIBUTOR_LOGIN"] = contributor_login
+        subprocess.run(
+            [sys.executable, ".github/scripts/contributors.py"],
+            check=True,
+            env=contributor_env,
+        )
+
     subprocess.run(["git", "config", "user.name", "github-actions[bot]"], check=True)
     subprocess.run(
         [
@@ -399,7 +408,7 @@ def commit_readme(issue_number, readme, updated_readme):
         ],
         check=True,
     )
-    subprocess.run(["git", "add", "README.md"], check=True)
+    subprocess.run(["git", "add", "-A"], check=True)
     subprocess.run(
         ["git", "commit", "-m", f"docs: add resources from issue #{issue_number}"],
         check=True,
@@ -483,7 +492,13 @@ def main():
                 f"left the issue open for your review:\n\n{details}",
             )
             return
-        committed = commit_readme(issue_number, readme, updated_readme)
+        issue_user = (issue.get("user") or {}).get("login")
+        committed = commit_readme(
+            issue_number,
+            readme,
+            updated_readme,
+            issue_user,
+        )
         if not committed:
             comment(
                 issue["number"],

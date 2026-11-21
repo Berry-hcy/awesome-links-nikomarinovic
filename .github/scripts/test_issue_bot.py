@@ -242,6 +242,7 @@ class IssueBotTests(unittest.TestCase):
                 "### Resource URL\n\nhttps://example.com\n"
             ),
             "state": "open",
+            "user": {"login": "SebastiaanBoon"},
         }
         resource = {
             "name": "Example",
@@ -283,7 +284,7 @@ class IssueBotTests(unittest.TestCase):
                 os.chdir(previous_cwd)
 
         label.assert_called_once_with(23, "new resource")
-        commit.assert_called_once_with("23", ANY, "updated README")
+        commit.assert_called_once_with("23", ANY, "updated README", "SebastiaanBoon")
         add_comment.assert_called_once()
         self.assertIn("README was updated by this issue", add_comment.call_args.args[1])
         close.assert_called_once_with("23")

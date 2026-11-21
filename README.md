@@ -510,6 +510,7 @@
   <a href="https://github.com/tumingke0"><img src=".github/avatars/tumingke0.svg" width="64" height="64" alt="tumingke0" title="tumingke0" /></a>
   <a href="https://github.com/seifip"><img src=".github/avatars/seifip.svg" width="64" height="64" alt="seifip" title="seifip" /></a>
   <a href="https://github.com/happynocode"><img src=".github/avatars/happynocode.svg" width="64" height="64" alt="happynocode" title="happynocode" /></a>
+  <a href="https://github.com/SebastiaanBoon"><img src=".github/avatars/SebastiaanBoon.svg" width="64" height="64" alt="SebastiaanBoon" title="SebastiaanBoon" /></a>
 </p>
 <!-- CONTRIBUTORS:END -->
 
