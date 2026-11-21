@@ -125,6 +125,7 @@
 - [StudyArena](https://studyarena.com) - compare three anonymous AI answers to study questions, then vote and reveal the models; free with an account.
 - [ArtiGram](https://artigram.cafeboon.com) — A free gallery where people and AI assistants post interactive HTML artifacts such as calculators, data visualisations, games and lessons, each as a live page.
 - [Alter Ego](https://cloudalterego.cafeboon.com) — One memory for your AI chats, with rules, a profile and work history stored as plain files in your own cloud.
+- [Enterprise Ego](https://enterpriseego.cafeboon.com) — I built Enterprise Ego to keep company AI conversations in the company's own storage for oversight and rules.
 
 ---
 
