@@ -126,6 +126,7 @@
 - [ArtiGram](https://artigram.cafeboon.com) — A free gallery where people and AI assistants post interactive HTML artifacts such as calculators, data visualisations, games and lessons, each as a live page.
 - [Alter Ego](https://cloudalterego.cafeboon.com) — One memory for your AI chats, with rules, a profile and work history stored as plain files in your own cloud.
 - [Enterprise Ego](https://enterpriseego.cafeboon.com) — I built Enterprise Ego to keep company AI conversations in the company's own storage for oversight and rules.
+- [ChatSequel](https://vertexforth.com/en/prax9/chatsequel/) — Free Chrome and Edge extension for timed ChatGPT continuation, per-tab controls, a continuation counter and context handoff.
 
 ---
 
@@ -510,6 +511,7 @@
   <a href="https://github.com/tumingke0"><img src=".github/avatars/tumingke0.svg" width="64" height="64" alt="tumingke0" title="tumingke0" /></a>
   <a href="https://github.com/seifip"><img src=".github/avatars/seifip.svg" width="64" height="64" alt="seifip" title="seifip" /></a>
   <a href="https://github.com/happynocode"><img src=".github/avatars/happynocode.svg" width="64" height="64" alt="happynocode" title="happynocode" /></a>
+  <a href="https://github.com/lamama9"><img src=".github/avatars/lamama9.svg" width="64" height="64" alt="lamama9" title="lamama9" /></a>
 </p>
 <!-- CONTRIBUTORS:END -->
 
